@@ -1,2 +1,1 @@
 # ecormmerce-obsequion
-## Nome
