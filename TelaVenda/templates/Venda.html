@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Vendas</title>
+</head>
+<body>
+    <h1>Vendas</h1>
+    <ul>
+        {% for venda in vendas %}
+            <li>{{ venda.cliente }} comprou {{ venda.quantidade }} de {{ venda.produto }} em {{ venda.data }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

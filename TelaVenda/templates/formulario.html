@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Venda</h2>
+        <form method="post" action="/submit-venda">
+            <div class="form-group">
+                <label for="cliente">Cliente</label>
+                <input type="text" id="cliente" name="cliente" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="produto">Produto</label>
+                <input type="text" id="produto" name="produto" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" name="quantidade" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço</label>
+                <input type="text" id="preco" name="preco" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
