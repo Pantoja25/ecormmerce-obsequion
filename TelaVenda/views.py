@@ -15,7 +15,7 @@ def Venda(request):
 
 def formulario(request):
     template = loader.get_template("formulario.html")
-    return formulario(template.render())
+    return HttpResponse(template.render())
 
 def VendaConcluida(request, venda_id):
     venda = Venda.objects.get(id=venda_id)
