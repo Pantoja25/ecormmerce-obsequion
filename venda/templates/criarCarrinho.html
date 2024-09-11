@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar Item ao Carrinho</title>
 </head>
 <body>
-    <form action="" method="post"> 
-    <input type="text" name="cliente">
-    <br>  
-    <input type="text" name="produto">
-    <br>  
-    <input type="text" name="quantidade">
-    <br> 
-    <input type="text" name="preco">
-    <br>  
-    
-        <fieldset>
-            <legend>
-                item de venda
-            </legend>
+    <h1>Adicionar Item ao Carrinho</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <input type="text" name="cliente" placeholder="Cliente">
+        <br>  
+        <input type="text" name="produto" placeholder="Produto">
+        <br>  
+        <input type="text" name="quantidade" placeholder="Quantidade">
+        <br> 
+        <input type="text" name="preco" placeholder="Preço">
+        <br>  
 
-            <input type="text">qtdVenda
-            precoUND
-            produto
-            <input type="text">
-            <input type="text">
-            <input type="text">
+        <fieldset>
+            <legend>Item de Venda</legend>
+            <input type="text" name="qtdVenda" placeholder="Quantidade de Venda">
+            <br>
+            <input type="text" name="precoUND" placeholder="Preço por Unidade">
+            <br>
+            <input type="text" name="produto" placeholder="Produto">
         </fieldset>
 
+        <button type="submit">Adicionar</button>
     </form>
+    <a href="{% url 'carrinho' %}">Voltar ao Carrinho</a>
 </body>
 </html>

@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrinho de Compras</title>
 </head>
 <body>
-    CARRINHOS
+    <h1>Carrinho de Compras</h1>
+    <ul>
+        {% for item in carrinho %}
+            <li>{{ item.produto }} - {{ item.quantidade }} - {{ item.preco }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'criar_carrinho' %}">Adicionar Novo Item</a>
+
+    <h2>CARRINHOS</h2>
 </body>
 </html>
