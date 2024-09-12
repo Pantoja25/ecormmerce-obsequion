@@ -27,6 +27,7 @@ class Venda(models.Model):
     quantidade_vendida = models.IntegerField(db_column='Quantidade_Vendida', blank=True, null=True)  # Field name made lowercase.
     nome = models.CharField(db_column='Nome', max_length=35, blank=True, null=True)  # Field name made lowercase.
     cliente = models.CharField(db_column='Cliente', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    status = models.IntegerField()
     adm = models.IntegerField(blank=True, null=True)
 
     class Meta:

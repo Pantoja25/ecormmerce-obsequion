@@ -22,6 +22,7 @@ class Migration(migrations.Migration):
                 ('quantidade_vendida', models.IntegerField(blank=True, db_column='Quantidade_Vendida', null=True)),
                 ('nome', models.CharField(blank=True, db_column='Nome', max_length=35, null=True)),
                 ('cliente', models.CharField(blank=True, db_column='Cliente', max_length=50, null=True)),
+                ('status', models.IntegerField()),
                 ('adm', models.IntegerField(blank=True, null=True)),
             ],
             options={
