@@ -77,10 +77,25 @@ WSGI_APPLICATION = 'Ecormmerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecommerce_obsequion',
+        'USER': 'sys_ecommerce',
+        'PASSWORD': 'senac123#',
+        'HOST': '192.168.30.145',
+        'PORT': 3306,
     }
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'ecommerce_obsequion',
+#        'USER': 'sys_ecommerce',
+#        'PASSWORD': 'senac123#',
+#        'HOST': '192.168.30.171',
+#        'PORT': 3306,
+#    }
+#}
 
 
 # Password validation
